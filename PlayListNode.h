@@ -8,9 +8,9 @@ public:
     PlaylistNode();  
     PlaylistNode(std::string uniqueID, std::string songName, std::string artistName, int songLength);  
 
-    std::string GetID() const;
-    std::string GetSongName() const;
-    std::string GetArtistName() const;
+    string GetID() const;
+    string GetSongName() const;
+    string GetArtistName() const;
     int GetSongLength() const;
     PlaylistNode* GetNext() const;
 
@@ -22,9 +22,9 @@ public:
     void PrintPlaylistNode() const;
 
 private:
-    std::string uniqueID;
-    std::string songName;
-    std::string artistName;
+    string uniqueID;
+    string songName;
+    string artistName;
     int songLength;
     PlaylistNode* nextNodePtr;
 

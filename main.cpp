@@ -24,29 +24,29 @@ PlaylistNode* ExecuteMenu(char option, string playlistTitle, PlaylistNode* headN
 
    }
    
-   if(option == 'd'){
+   else if(option == 'd'){
 
    }
 
-   if(option == 'c'){
-
-   }
-   
-   if(option == 's'){
+   else if(option == 'c'){
 
    }
    
-   if(option == 't'){
+   else if(option == 's'){
+
+   }
+   
+   else if(option == 't'){
 
    }
 
-   if(option == 'o'){
+   else if(option == 'o'){
 
    }
 
-   if(option == 'q'){
+   else if(option == 'q'){
 
-   }
+   } else{
 
    return ptr;
    

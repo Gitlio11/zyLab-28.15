@@ -57,13 +57,25 @@ int main(){
 
   string playlistTitle;
    char option;
-
-cout << "Enter playlist's title:" << end;
-cin >> playlistTitle;
+   vector<char> options = {'a', 'd', 'c', 's', 't', 'o', 'q'};
+   cout << "Enter playlist's title:" << end;
+   cin >> playlistTitle;
 
    PrintMenu();
+   cin >> option;
+
+   for (option : options) {
+            if (userInput.size() == 1 && userInput[0] == option) {
+                bool isValidInput = true;
+                break;
+            }
+        }
    
-   cin << option;
+   if(isValidInput){
+   ExecuteMenu(option, playlistTitle, POINTER)
+   }
+   
+
 
    
 

@@ -7,7 +7,7 @@ using namespace std;
 class PlayListNode {
 public:
     PlaylistNode();  
-    PlaylistNode(std::string uniqueID, std::string songName, std::string artistName, int songLength);  
+    PlaylistNode(string uniqueID, string songName, string artistName, int songLength);  
 
     string GetID() const;
     string GetSongName() const;

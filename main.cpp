@@ -52,11 +52,19 @@ PlaylistNode* ExecuteMenu(char option, string playlistTitle, PlaylistNode* headN
    
 }
 
+
 int main(){
 
   string playlistTitle;
+   char option;
 
 cout << "Enter playlist's title:" << end;
 cin >> playlistTitle;
+
+   PrintMenu();
+   
+   cin << option;
+
+   
 
 }

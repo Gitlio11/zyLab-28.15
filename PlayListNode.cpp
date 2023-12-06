@@ -31,7 +31,7 @@ string PlaylistNode::GetSongName() const {
     return songName;
 }
 
-std::string PlaylistNode::GetArtistName() const {
+string PlaylistNode::GetArtistName() const {
     return artistName;
 }
 
@@ -54,7 +54,7 @@ void PlaylistNode::SetNext(PlaylistNode* nodePtr) {
 }
 
 void PlaylistNode::PrintPlaylistNode() const {
-    std::cout << "Unique ID: " << uniqueID << endl;
-    std::cout << "Song Name: " << songName << endl;
-    std::cout << "Artist Name: " << artistName << endl;
-    std::cout << "Song Length (in seconds): " << songLength << endl;
+    cout << "Unique ID: " << uniqueID << endl;
+    cout << "Song Name: " << songName << endl;
+    cout << "Artist Name: " << artistName << endl;
+    cout << "Song Length (in seconds): " << songLength << endl;

@@ -19,7 +19,36 @@ void PrintMenu(const string playlistTitle) {
 }
 
 PlaylistNode* ExecuteMenu(char option, string playlistTitle, PlaylistNode* headNode) {
-   /* Type your code here */
+   
+   if(option == 'a'){
+
+   }
+   
+   if(option == 'd'){
+
+   }
+
+   if(option == 'c'){
+
+   }
+   
+   if(option == 's'){
+
+   }
+   
+   if(option == 't'){
+
+   }
+
+   if(option == 'o'){
+
+   }
+
+   if(option == 'q'){
+
+   }
+
+   return ptr;
    
 }
 

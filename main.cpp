@@ -64,7 +64,7 @@ int main(){
    PlaylistNode* node;
    bool isValidInput = false;
    
-   cout << "Enter playlist's title:" << end;
+   cout << "Enter playlist's title:" << endl;
    cin >> playlistTitle;
 
    do {

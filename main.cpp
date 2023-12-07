@@ -73,9 +73,9 @@ int main(){
    cin >> input;
    
       PlaylistNode* newSong = ExecuteMenu(option, playlistTitle, node);
-      if (add != nullptr) {
-         node.SetNext(newSong);
-         node = node.GetNext();
+      if (newSong != nullptr) {
+         node->SetNext(newSong);
+         node = node->GetNext();
       }
    } while (input !='q');
 

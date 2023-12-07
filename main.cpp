@@ -22,7 +22,8 @@ PlaylistNode* ExecuteMenu(char option, string playlistTitle, PlaylistNode* headN
    
    if(option == 'a'){
          // Get user input... then:
-         PlaylistNode* temp;
+      string songTitle;
+         PlaylistNode* temp = new playlistNode();
          temp->setTitle(songTitle);
          // ...
          return temp;
@@ -52,7 +53,7 @@ PlaylistNode* ExecuteMenu(char option, string playlistTitle, PlaylistNode* headN
       return nullptr;
    } else{
 
-   return ptr;
+   return nullptr;
    
 }
 
@@ -61,7 +62,7 @@ int main(){
 
    string playlistTitle;
    char input;
-   PlaylistNode* node;
+   PlaylistNode* node = new PlaylistNode();
    bool isValidInput = false;
    
    cout << "Enter playlist's title:" << endl;
@@ -77,9 +78,7 @@ int main(){
          node = node.GetNext();
       }
    } while (input !='q');
-   
 
-
-   
+   delete node;
 
 }

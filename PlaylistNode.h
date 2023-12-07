@@ -4,7 +4,7 @@
 #define ZYLAB_28_15_PLAYLISTNODE_H
 using namespace std;
 
-class PlayListNode {
+class PlaylistNode {
 public:
     PlaylistNode();  
     PlaylistNode(string uniqueID, string songName, string artistName, int songLength);  

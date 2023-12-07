@@ -67,19 +67,27 @@ int main(){
    bool isValidInput = false;
    
    cout << "Enter playlist's title:" << endl<<endl;
-   cin >> playlistTitle;
-
-   do {
-   PrintMenu(playlistTitle);
+   getline(cin, playlistTitle);
+   
    cin >> input;
    
+   PrintMenu(playlistTitle);
+   if(input!='q'){
+   while(isValidInput){
+
       PlaylistNode* newSong = ExecuteMenu(input, playlistTitle, node);
       if (newSong != nullptr) {
          node->SetNext(newSong);
          node = node->GetNext();
       }
-   } while (input !='q');
-
+      break;
+   } 
+   }
+   
+   else{
+    isValidInput = false;
+   }
+   
    delete node;
    
    return 0;

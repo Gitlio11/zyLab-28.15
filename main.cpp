@@ -22,11 +22,11 @@ PlaylistNode* ExecuteMenu(char option, string playlistTitle, PlaylistNode* headN
    
    if(option == 'a'){
          // Get user input... then:
-      string songTitle;
-         PlaylistNode* temp = new playlistNode();
-         temp->setTitle(songTitle);
+      //string songTitle;
+        // PlaylistNode* temp = new playlistNode();
+         //temp->setTitle(songTitle);
          // ...
-         return temp;
+         //return temp;
    }
    
    else if(option == 'd'){
@@ -51,10 +51,11 @@ PlaylistNode* ExecuteMenu(char option, string playlistTitle, PlaylistNode* headN
 
    else if(option == 'q'){
       return nullptr;
-   } else{
+   } 
+   else{
 
    return nullptr;
-   
+   }
 }
 
 
@@ -65,14 +66,14 @@ int main(){
    PlaylistNode* node = new PlaylistNode();
    bool isValidInput = false;
    
-   cout << "Enter playlist's title:" << endl;
+   cout << "Enter playlist's title:" << endl<<endl;
    cin >> playlistTitle;
 
    do {
-   PrintMenu();
+   PrintMenu(playlistTitle);
    cin >> input;
    
-      PlaylistNode* newSong = ExecuteMenu(option, playlistTitle, node);
+      PlaylistNode* newSong = ExecuteMenu(input, playlistTitle, node);
       if (newSong != nullptr) {
          node->SetNext(newSong);
          node = node->GetNext();
@@ -80,5 +81,7 @@ int main(){
    } while (input !='q');
 
    delete node;
+   
+   return 0;
 
 }

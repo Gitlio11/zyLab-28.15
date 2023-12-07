@@ -45,7 +45,7 @@ PlaylistNode* ExecuteMenu(char option, string playlistTitle, PlaylistNode* headN
    }
 
    else if(option == 'q'){
-
+      return nullptr;
    } else{
 
    return ptr;
@@ -58,25 +58,17 @@ int main(){
    string playlistTitle;
    char input;
    PlaylistNode* node;
-   vector<char> options = {'a', 'd', 'c', 's', 't', 'o', 'q'};
    bool isValidInput = false;
    
    cout << "Enter playlist's title:" << end;
    cin >> playlistTitle;
 
+   do {
    PrintMenu();
    cin >> input;
-
-   for (char option : options){
-            if(option==input){
-               isValidInput = true;
-                break;
-            }
-        }
    
-   if(isValidInput){
    ExecuteMenu(option, playlistTitle, node)
-      }
+   } while (input !='q');
    
 
 

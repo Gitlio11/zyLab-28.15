@@ -11,7 +11,7 @@ PlaylistNode::PlaylistNode(){
   songName= "none";
   artistName = "none";
   songLength= 0;
-  nextNodePt=nullptr;
+  nextNodePtr=nullptr;
 }
 
 PlaylistNode::PlaylistNode(string id,string name, string artist, int length){
@@ -19,7 +19,7 @@ uniqueID = id;
   songName= name;
   artistName = artist;
   songLength= length;
-  nextNodePt=nullptr;
+  nextNodePtr=nullptr;
 }
     
 

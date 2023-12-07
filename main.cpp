@@ -14,7 +14,7 @@ void PrintMenu(const string playlistTitle) {
    cout<<"o - Output full playlist"<<endl;
    cout<<"q - Quit"<<endl<<endl;
 
-   cout<<"Choose an option:"<<endl
+   cout<<"Choose an option:"<<endl;
    
 }
 

@@ -21,7 +21,11 @@ void PrintMenu(const string playlistTitle) {
 PlaylistNode* ExecuteMenu(char option, string playlistTitle, PlaylistNode* headNode) {
    
    if(option == 'a'){
-
+         // Get user input... then:
+         PlaylistNode* temp;
+         temp->setTitle(songTitle);
+         // ...
+         return temp;
    }
    
    else if(option == 'd'){
@@ -67,7 +71,11 @@ int main(){
    PrintMenu();
    cin >> input;
    
-   ExecuteMenu(option, playlistTitle, node)
+      PlaylistNode* newSong = ExecuteMenu(option, playlistTitle, node);
+      if (add != nullptr) {
+         node.SetNext(newSong);
+         node = node.GetNext();
+      }
    } while (input !='q');
    
 

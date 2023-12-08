@@ -45,3 +45,4 @@ void PlaylistNode::PrintPlaylistNode() const {
     cout << "Song Name: " << songName << endl;
     cout << "Artist Name: " << artistName << endl;
     cout << "Song Length (in seconds): " << songLength << endl;
+}

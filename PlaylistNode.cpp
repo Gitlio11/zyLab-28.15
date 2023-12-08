@@ -7,7 +7,7 @@ using namespace std;
 
 PlaylistNode::PlaylistNode() : uniqueID("none"), songName("none"), artistName("none"), songLength(0), nextNodePtr(nullptr) {}
 
-PlaylistNode::PlaylistNode(std::string id,std::string name,std::string artist,std::int length){}
+PlaylistNode::PlaylistNode(string id,string name,string artist,int length) : uniqueID(id), songName(name), artistName(artist), songLength(length), nextNodePtr(nullptr){}
     
 
 string PlaylistNode::GetID() const {

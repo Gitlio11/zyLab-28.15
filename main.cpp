@@ -20,44 +20,49 @@ void PrintMenu(const string playlistTitle) {
 
 PlaylistNode* ExecuteMenu(char option, string playlistTitle, PlaylistNode* headNode) {
    
-   if(option == 'a'){
+   switch(option){
+   case'a':
          // Get user input... then:
       //string songTitle;
         // PlaylistNode* temp = new playlistNode();
          //temp->setTitle(songTitle);
          // ...
          //return temp;
-   }
+         PrintMenu(playlistTitle);
+         break;
    
-   else if(option == 'd'){
-
-   }
-
-   else if(option == 'c'){
-
-   }
    
-   else if(option == 's'){
+   case'd':
+   PrintMenu(playlistTitle);
+   break;
 
-   }
+   case'c':
+   PrintMenu(playlistTitle);
+   break;
    
-   else if(option == 't'){
+   case's':
+   PrintMenu(playlistTitle);
+   break;
+   
+   case't':
+   PrintMenu(playlistTitle);
+   break;
 
-   }
+   case'o':
+      cout<<"JAMZ - OUTPUT FULL PLAYLIST ";
+         if(headNode == nullptr){
+            cout<<"Playlist is empty";
+         }
+   
+   break;
 
-   else if(option == 'o'){
-   cout<<"JAMZ - OUTPUT FULL PLAYLIST ";
-      if(headNode == nullptr){
-   cout<<"Playlist is empty";
-      }
-   }
-
-   else if(option == 'q'){
+   case'q':
       return nullptr;
-   } 
-   else{
+      break;
 
+   default:
    return nullptr;
+   break;
    }
 }
 
@@ -71,25 +76,24 @@ int main(){
    
    cout << "Enter playlist's title:" << endl<<endl;
    getline(cin, playlistTitle);
-   
-   cin >> input;
-   
    PrintMenu(playlistTitle);
-   if(input!='q'){
+   
    while(isValidInput){
-
-      PlaylistNode* newSong = ExecuteMenu(input, playlistTitle, node);
-      if (newSong != nullptr) {
-         node->SetNext(newSong);
-         node = node->GetNext();
-      }
-      break;
-   } 
+   cin >> input;
+      if(input!='q'){
+         PlaylistNode* newSong = ExecuteMenu(input, playlistTitle, node);
+         if (newSong != nullptr) {
+            node->SetNext(newSong);
+            node = node->GetNext();
+            
+         }
+         
+         else{
+          isValidInput = false;
+         }
+      } 
    }
    
-   else{
-    isValidInput = false;
-   }
    
    delete node;
    

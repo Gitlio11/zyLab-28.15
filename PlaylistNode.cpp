@@ -3,6 +3,7 @@
 //
 
 #include "PlaylistNode.h"
+#include <iostream>
 using namespace std;
 
 PlaylistNode::PlaylistNode() : uniqueID("none"), songName("none"), artistName("none"), songLength(0), nextNodePtr(nullptr) {}

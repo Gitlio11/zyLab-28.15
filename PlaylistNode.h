@@ -1,7 +1,10 @@
-//
+
 // Created by Emilio Munoz on 12/5/23.
-#ifndef ZYLAB_28_15_PLAYLISTNODE_H
-#define ZYLAB_28_15_PLAYLISTNODE_H
+#ifndef PLAYLISTNODE_H
+#define PLAYLISTNODE_H
+
+#include <iostream>
+#include <string>
 using namespace std;
 
 class PlaylistNode {
@@ -34,4 +37,4 @@ private:
 };
 
 
-#endif //ZYLAB_28_15_PLAYLISTNODE_H
+#endif

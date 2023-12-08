@@ -46,7 +46,10 @@ PlaylistNode* ExecuteMenu(char option, string playlistTitle, PlaylistNode* headN
    }
 
    else if(option == 'o'){
-
+   cout<<"JAMZ - OUTPUT FULL PLAYLIST ";
+      if(headNode == nullptr){
+   cout<<"Playlist is empty";
+      }
    }
 
    else if(option == 'q'){

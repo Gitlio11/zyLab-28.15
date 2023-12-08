@@ -5,14 +5,7 @@
 #include "PlaylistNode.h"
 using namespace std;
 
-PlaylistNode::PlaylistNode(){
-
-  uniqueID = "none";
-  songName= "none";
-  artistName = "none";
-  songLength= 0;
-  nextNodePtr=nullptr;
-}
+PlaylistNode::PlaylistNode() : uniqueID("none"), songName("none"), artistName("none"), songLength(0), nextNodePtr(nullptr) {}
 
 PlaylistNode::PlaylistNode(string id,string name, string artist, int length){
 uniqueID = id;
